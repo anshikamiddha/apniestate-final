@@ -1,0 +1,190 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+// Better Auth Models
+model User {
+  id            String   @id @default(cuid())
+  name          String?
+  email         String   @unique
+  emailVerified Boolean  @default(false)
+  image         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  accounts   Account[]
+  sessions   Session[]
+  favorites  Favorite[]
+  properties Property[]
+}
+
+model Account {
+  id           String    @id @default(cuid())
+  userId       String
+  accountId    String
+  providerId   String
+  accessToken  String?
+  refreshToken String?
+  idToken      String?
+  expiresAt    DateTime?
+  password     String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([providerId, accountId])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Verification {
+  id         String   @id @default(cuid())
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([identifier, value])
+}
+
+// Application Models
+model Property {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String   @db.Text
+  price       Int
+  address     String
+  city        String
+  state       String
+  zipCode     String?
+  type        String // e.g., "house", "apartment", "condo"
+  status      String   @default("available") // "available", "sold", "pending"
+  category    String   @default("sale") // "sale", "rent", "buy"
+  bedrooms    Int
+  bathrooms   Int
+  area        Int // in square feet/meters
+  images      String[] // Array of image URLs
+  features    String[] // Array of features
+  phone       String? // Contact phone number
+  email       String? // Contact email
+  agentId     String?
+  userId      String? // Owner of the property (nullable for existing properties)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  agent     Agent?     @relation(fields: [agentId], references: [id])
+  user      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  favorites Favorite[]
+
+  @@index([slug])
+  @@index([agentId])
+  @@index([userId])
+  @@index([city])
+  @@index([type])
+  @@index([status])
+  @@index([category])
+}
+
+model Agent {
+  id          String   @id @default(cuid())
+  name        String
+  email       String   @unique
+  phone       String
+  image       String?
+  bio         String?  @db.Text
+  experience  Int // years of experience
+  specialties String[] // Array of specialties
+  category    String? // Role: builder, interior-designer, architect, contractor, real-estate-agent, vastu-consultant
+  portfolio   String[] // Portfolio images
+  userId      String?  @unique // Link to User account
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  properties Property[]
+
+  @@index([email])
+  @@index([category])
+  @@index([userId])
+}
+
+model Favorite {
+  id         String   @id @default(cuid())
+  userId     String
+  propertyId String
+  createdAt  DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  property Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, propertyId])
+  @@index([userId])
+  @@index([propertyId])
+}
+
+model ServiceRequest {
+  id          String   @id @default(cuid())
+  serviceType String // "construction", "interior-design", "legal", "vastu", "consulting", "home-loan", "materials"
+  name        String
+  email       String
+  phone       String
+  message     String   @db.Text
+  budget      String? // Optional budget range
+  location    String? // Optional location
+  timeline    String? // Optional timeline
+  documents   String[] // Array of document URLs from Cloudinary
+  status      String   @default("pending") // "pending", "processing", "completed", "cancelled"
+  userId      String? // Optional - if user is logged in
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([serviceType])
+  @@index([status])
+  @@index([email])
+}
+
+model UserRegistration {
+  id              String    @id @default(cuid())
+  role            String // "builder", "interior-designer", "architect", "contractor", "real-estate-agent"
+  name            String
+  email           String    @unique
+  password        String // Hashed password
+  phone           String?
+  profileImage    String? // Cloudinary URL
+  experience      String? // Years of experience or description
+  portfolio       String[] // Array of work sample URLs from Cloudinary
+  documents       String[] // Array of document URLs (certificates, licenses, etc.)
+  description     String?   @db.Text
+  status          String    @default("pending") // "pending", "approved", "rejected"
+  approvalToken   String    @unique @default(cuid())
+  rejectionToken  String    @unique @default(cuid())
+  rejectionReason String?   @db.Text
+  reviewedAt      DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([role])
+  @@index([approvalToken])
+  @@index([rejectionToken])
+}

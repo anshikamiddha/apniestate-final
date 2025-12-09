@@ -1,0 +1,330 @@
+{
+  "menu": {
+    "home": "Home",
+    "properties": "Properties",
+    "services": "Services",
+    "agents": "Agents",
+    "favorite": "Favorites",
+    "myProperties": "My Properties"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, id {🇮🇩 Indonesia} en {🇺🇸 English} other {Unknown}}"
+  },
+  "heroSection": {
+    "subHeading": "Start Your Journey Here!",
+    "heading": "Find your dream property effortlessly with",
+    "description": "Apni Estate simplifies your property search with fast and reliable service.",
+    "button": "Explore Now",
+    "subButton": "Trusted by"
+  },
+  "serviceSection": {
+    "heading": "Our Services",
+    "description": "We are dedicated to offering outstanding real estate services with a variety of benefits that elevate your experience. Discover why we are the top choice for your property needs.",
+    "statistics": {
+      "trustedBy": {
+        "title": "Trusted by",
+        "value": "1,200+"
+      },
+      "propertiesSold": {
+        "title": "Properties Sold",
+        "value": "3,500+"
+      }
+    },
+    "services": {
+      "bestPrice": {
+        "title": "Best Price"
+      },
+      "expertAdvice": {
+        "title": "Expert Advice"
+      },
+      "personalizedService": {
+        "title": "Personalized Service"
+      }
+    },
+    "accordionItems": {
+      "bestPrice": {
+        "title": "Best Price",
+        "content": "We offer the most competitive prices in the market, ensuring that you get the best deal for your budget. Whether you're buying or selling, our team will negotiate the best terms for you."
+      },
+      "expertAdvice": {
+        "title": "Expert Advice",
+        "content": "Our team consists of experienced real estate agents who are ready to guide you through every step of your property journey, from finding the right location to finalizing the deal."
+      },
+      "personalizedService": {
+        "title": "Personalized Service",
+        "content": "We customize our services to fit your individual needs, making sure your experience with us is smooth and effortless. Your satisfaction is our top priority."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "content": "We offer round-the-clock support to assist you with any questions or issues. Whether you need advice on properties or help with paperwork, our team is always available to assist."
+      }
+    },
+    "additionalServices": {
+      "title": "Additional Services",
+      "viewAll": "View All Services",
+      "items": {
+        "construction": "Construction Services",
+        "interior-design": "Interior Design",
+        "legal": "Legal Services",
+        "vastu": "Vastu Consultation",
+        "consulting": "Construction Consulting",
+        "home-loan": "Home Loans",
+        "materials": "Construction Materials"
+      }
+    }
+  },
+  "property": {
+    "relatedProperties": "Related Properties",
+    "specification": {
+      "title": "Specification",
+      "bedroom": "Bedroom",
+      "bathroom": "Bathroom",
+      "landArea": "Land Area",
+      "buildingArea": "Building Area",
+      "electricity": "Electricity",
+      "rentPeriod": "Month",
+      "pricePerM2": "Price Per M²",
+      "certificate": "Certificate"
+    }
+  },
+  "agent": {
+    "agentProperties": "Agents Properties",
+    "description": "Description",
+    "memberSince": "Member Since",
+    "phone": "Phone",
+    "email": "Email",
+    "totalProperties": "Total Properties",
+    "totalSold": "Total Sold",
+    "avaragePrice": "Avarage Price"
+  },
+  "browsePropertySection": {
+    "title": "Browse Properties",
+    "description": "Explore our diverse selection of properties and find the perfect home that suits your needs. Whether you're looking for a cozy apartment or a spacious house, we have options for every taste and budget. Start browsing now to discover your ideal property."
+  },
+  "currency": {
+    "billion": "B",
+    "million": "M",
+    "thousand": "K"
+  },
+  "contactUsSection": {
+    "title": "Finding your perfect property is just a click away!",
+    "description": "Start browsing our property listings today and take the first step towards making your homeownership dreams a reality.",
+    "button": "Contact Us"
+  },
+  "notfound": {
+    "title": "Oops! Data Missing",
+    "description": "We couldn't find what you're looking for. Please double-check your request or try again soon!"
+  },
+  "agentsPage": {
+    "title": "Our Agents",
+    "description": "Meet our team of dedicated professionals ready to help you find your dream property. With extensive expertise and deep market knowledge, we are committed to providing the best service for your needs."
+  },
+  "favoritesPage": {
+    "title": "Your Favorite Properties",
+    "description": "Explore your list of favorite properties you've saved. Find the ones that best match your needs and preferences, ready for the next step."
+  },
+  "favoritesToast": {
+    "add": "Success add to favorites",
+    "remove": "Success remove from favorites"
+  },
+  "myProperties": {
+    "title": "My Properties",
+    "noProperties": "You haven't added any properties yet."
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "description": "Comprehensive real estate solutions tailored to your needs. From construction to legal services, we've got you covered.",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Explore our properties or request a service today and let us help you achieve your real estate goals.",
+      "button": "Browse Properties"
+    },
+    "services": {
+      "construction": {
+        "title": "Construction Services",
+        "subtitle": "Build Your Dream Property",
+        "description": "Professional project management and execution for residential and commercial properties.",
+        "fullDescription": "Transform your vision into reality with our comprehensive construction services. We handle everything from planning and design to execution and handover, ensuring quality construction that meets international standards.",
+        "features": {
+          "1": "End-to-end project management from planning to completion",
+          "2": "Quality materials and experienced workforce",
+          "3": "Timely delivery with transparent cost structure",
+          "4": "Post-construction support and warranty"
+        }
+      },
+      "interior-design": {
+        "title": "Interior Design",
+        "subtitle": "Create Beautiful Spaces",
+        "description": "Customized home and office interior design services.",
+        "fullDescription": "Our expert interior designers will transform your space into a beautiful and functional environment. We offer personalized design solutions that reflect your style and meet your needs.",
+        "features": {
+          "1": "Custom design concepts tailored to your taste",
+          "2": "3D visualization and walkthroughs",
+          "3": "Space optimization and furniture planning",
+          "4": "Complete execution with quality materials"
+        }
+      },
+      "legal": {
+        "title": "Legal Services",
+        "subtitle": "Property Legal Support",
+        "description": "Expert legal assistance for all property matters.",
+        "fullDescription": "Navigate property transactions with confidence. Our legal experts provide comprehensive support for documentation, verification, and all legal aspects of property dealings.",
+        "features": {
+          "1": "Title verification and due diligence",
+          "2": "Documentation and registration assistance",
+          "3": "Legal consultation and dispute resolution",
+          "4": "Contract drafting and review"
+        }
+      },
+      "vastu": {
+        "title": "Vastu Consultation",
+        "subtitle": "Harmonize Your Space",
+        "description": "Expert Vastu guidance for homes and offices.",
+        "fullDescription": "Enhance positive energy in your property with Vastu consultation from certified experts. Get personalized recommendations for optimal placement and design.",
+        "features": {
+          "1": "Detailed Vastu analysis of your property",
+          "2": "Personalized recommendations and solutions",
+          "3": "Pre-construction Vastu planning",
+          "4": "Remedies for existing properties"
+        }
+      },
+      "consulting": {
+        "title": "Construction Consulting",
+        "subtitle": "Technical Expertise",
+        "description": "Professional technical and structural consulting.",
+        "fullDescription": "Get expert advice on construction projects. Our consultants provide technical guidance, quality assurance, and structural assessments to ensure your project's success.",
+        "features": {
+          "1": "Structural assessment and planning",
+          "2": "Quality control and site supervision",
+          "3": "Cost estimation and budget management",
+          "4": "Technical problem-solving and optimization"
+        }
+      },
+      "home-loan": {
+        "title": "Home Loans",
+        "subtitle": "Financial Assistance",
+        "description": "Home loan assistance with complete documentation support.",
+        "fullDescription": "Make your dream home affordable with our home loan services. We help you secure the best loan deals with minimal paperwork and hassle-free processing.",
+        "features": {
+          "1": "Competitive interest rates from multiple banks",
+          "2": "Complete documentation assistance",
+          "3": "Quick loan approval and processing",
+          "4": "Personalized loan recommendations"
+        }
+      },
+      "materials": {
+        "title": "Construction Materials",
+        "subtitle": "Quality Materials",
+        "description": "Premium construction materials at competitive rates.",
+        "fullDescription": "Source high-quality construction materials at the best prices. We have partnerships with leading suppliers to provide you with genuine materials for your project.",
+        "features": {
+          "1": "Wide range of quality construction materials",
+          "2": "Competitive pricing and bulk discounts",
+          "3": "Timely delivery and logistics support",
+          "4": "Material quality assurance and certification"
+        }
+      }
+    },
+    "serviceDetails": {
+      "features": "Key Features",
+      "requestTitle": "Request This Service",
+      "requestDescription": "Fill out the form below and our team will get back to you within 24-48 hours."
+    }
+  },
+  "serviceForm": {
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "budget": "Budget Range",
+    "budgetPlaceholder": "e.g., $50,000 - $100,000",
+    "location": "Location",
+    "locationPlaceholder": "Enter project location",
+    "timeline": "Expected Timeline",
+    "timelinePlaceholder": "e.g., 6 months, ASAP",
+    "message": "Project Details",
+    "messagePlaceholder": "Tell us about your project requirements...",
+    "documents": "Upload Documents",
+    "uploadDocument": "Upload File",
+    "documentInfo": "Upload relevant documents (PDF, Images, etc.)",
+    "documentUploaded": "Document uploaded successfully",
+    "uploadedDocuments": "Uploaded Documents",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "success": "Request submitted successfully! We'll contact you soon.",
+    "error": "Failed to submit request. Please try again."
+  },
+  "registration": {
+    "title": "Join as a Professional",
+    "description": "Register as a professional service provider and connect with clients looking for your expertise. All registrations are reviewed by our team to ensure quality service.",
+    "approvalNotice": "All registrations require admin approval. You'll receive an email once your KYC verification is complete.",
+    "apply": "Apply Now",
+    "registrationForm": "Registration",
+    "formDescription": "Please fill out all required fields carefully. Your application will be reviewed by our team within 24-48 hours.",
+    "alreadyRegistered": "Already registered?",
+    "loginHere": "Login here",
+    "roles": {
+      "builder": {
+        "title": "Builder",
+        "description": "Residential and commercial construction projects"
+      },
+      "interior-designer": {
+        "title": "Interior Designer",
+        "description": "Creative interior design and space planning"
+      },
+      "architect": {
+        "title": "Architect",
+        "description": "Architectural design and planning services"
+      },
+      "contractor": {
+        "title": "Contractor",
+        "description": "General contracting and project management"
+      },
+      "real-estate-agent": {
+        "title": "Real Estate Agent",
+        "description": "Property sales and rental services"
+      },
+      "vastu-consultant": {
+        "title": "Vastu Consultant",
+        "description": "Traditional Vastu Shastra consultation"
+      }
+    },
+    "form": {
+      "personalInfo": "Personal Information",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "password": "Password",
+      "passwordPlaceholder": "Create a strong password",
+      "passwordHint": "Password must be at least 8 characters long",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number (optional)",
+      "profileSection": "Profile",
+      "profileImage": "Profile Photo",
+      "uploadProfileImage": "Upload Profile Photo",
+      "professionalInfo": "Professional Information",
+      "experience": "Years of Experience",
+      "experiencePlaceholder": "e.g., 5 years or Fresh Graduate",
+      "description": "Professional Bio",
+      "descriptionPlaceholder": "Tell us about your expertise, specializations, and what makes you unique...",
+      "portfolio": "Portfolio",
+      "portfolioImages": "Work Samples",
+      "portfolioHint": "Upload images of your previous work to showcase your expertise (optional)",
+      "addPortfolioImage": "Add Portfolio Image",
+      "documents": "Documents & Certificates",
+      "uploadDocuments": "Professional Documents",
+      "documentsHint": "Upload certificates, licenses, or other relevant documents (optional)",
+      "addDocument": "Add Document",
+      "document": "Document",
+      "submitRegistration": "Submit Registration",
+      "submitting": "Submitting...",
+      "termsNotice": "By submitting this form, you agree to our Terms of Service and Privacy Policy. Your information will be reviewed by our team."
+    }
+  }
+}
+
